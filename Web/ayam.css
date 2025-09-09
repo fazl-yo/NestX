@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+  }
+  
+  body {
+    background: #eef5e5;
+    color: #2e4d2c;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background: #e2f0d9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  .logo {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e4d2c;
+  }
+  
+  .nav-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    color: #2e4d2c;
+    text-align: left;
+  }
+  
+  .nav-btn.active,
+  .nav-btn:hover {
+    background: #c6f27f;
+  }
+  
+  /* Main */
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Camera section */
+  .camera-section {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .camera-feed {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background: #ccc;
+  }
+  
+  .cage-title {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  /* Calendar */
+  .calendar {
+    background: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .calendar h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #4d704d;
+  }
+  
+  .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .calendar td, .calendar th {
+    padding: 5px;
+  }
+  
+  .calendar .active {
+    background: #000;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  /* Stats */
+  .stats {
+    display: flex;
+    margin: 15px 0;
+    gap: 10px;
+  }
+  
+  .stat {
+    flex: 1;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+  }
+  
+  .stat span {
+    font-size: 20px;
+    display: block;
+  }
+  
+  .healthy { background: #e2f7e1; }
+  .sick { background: #fff7e1; }
+  .dead { background: #f7e2e2; }
+  
+  /* Graph + Age */
+  .bottom-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .graph, .age {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+  }
+  
+  .age h1 {
+    font-size: 48px;
+    color: #2e4d2c;
+  }
+  
+  .age span {
+    font-size: 20px;
+    color: #a5d65f;
+  }
+  
+  /* Info cards */
+  .info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .info-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .info-card span {
+    display: block;
+    font-size: 22px;
+    margin-top: 5px;
+    color: #2e4d2c;
+  }
+  

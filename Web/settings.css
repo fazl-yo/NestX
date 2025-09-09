@@ -1,0 +1,239 @@
+:root {
+    --bg: #f4faef;
+    --bg-soft: #eef8e6;
+    --brand: #2f6b3b;
+    --brand-2: #a5e46e;
+    --text: #2e3b2f;
+    --muted: #6b7a6d;
+    --card: #ffffff;
+    --ring: rgba(46, 59, 47, .2);
+    --shadow: 0 6px 24px rgba(46, 59, 47, .08);
+    --radius: 18px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 25% -100px, #d7f1c5 0%, transparent 60%),
+        radial-gradient(900px 400px at 90% -80px, #e4f7d7 0%, transparent 60%), var(--bg);
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 28px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.brand {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--brand)
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .12)
+}
+
+/* Shell */
+.shell {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 22px;
+    padding: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav button {
+    appearance: none;
+    border: 0;
+    text-align: left;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: #fff;
+    font-weight: 700;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.03);
+    transition: transform .04s ease, background .2s ease;
+}
+
+.nav button:hover {
+    transform: translateY(-1px);
+}
+
+.nav button.active {
+    background: #c9f77f;
+    color: #234a2b
+}
+
+/* Content */
+.content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 22px;
+    align-items: start
+}
+
+.panel {
+    background: var(--bg-soft);
+    border-radius: var(--radius);
+    padding: 14px;
+    box-shadow: var(--shadow)
+}
+
+/* Settings sub menu */
+.subnav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.subnav button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: 0;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #fff;
+    font-weight: 700
+}
+
+.subnav button.active {
+    background: #d8f5a0;
+}
+
+.subnav svg {
+    width: 20px;
+    height: 20px
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    min-height: 420px;
+    box-shadow: var(--shadow)
+}
+
+.profile-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px
+}
+
+.profile-head img {
+    width: 86px;
+    height: 86px;
+    border-radius: 999px;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1)
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--brand)
+}
+
+.muted {
+    color: var(--muted);
+    font-weight: 500
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px
+}
+
+.field {
+    display: grid;
+    gap: 6px
+}
+
+.field label {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.field input,
+.field select {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e6eedf;
+    outline: none;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, .02);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px
+}
+
+.btn {
+    border: 0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.btn.primary {
+    background: linear-gradient(180deg, #b6f07b, #96dd5a);
+    color: #204023;
+}
+
+.btn.ghost {
+    background: #edf6e8;
+    color: #244e2c
+}
+
+@media (max-width: 980px) {
+    .shell {
+        grid-template-columns: 1fr
+    }
+
+    .content {
+        grid-template-columns: 1fr
+    }
+}

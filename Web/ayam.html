@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chicken Health Monitoring</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">H.I.J.A.U.</h2>
+      <nav>
+        <button class="nav-btn">Overview</button>
+        <button class="nav-btn active">Chickens</button>
+        <button class="nav-btn">Maggots</button>
+        <button class="nav-btn">Analytic</button>
+        <button class="nav-btn">Settings</button>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <div></div>
+        <img src="https://i.ibb.co/rx7FzCQ/chicken-avatar.jpg" alt="Profile" class="profile">
+      </header>
+
+      <section class="content">
+        <!-- Chicken camera -->
+        <div class="camera-section">
+          <!-- Live YOLO Camera Stream -->
+          <img src="{{ url_for('video_feed') }}" class="camera-feed" alt="Live Feed">
+          <p class="cage-title">Cage 1</p>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar">
+          <h3>&lt; August &gt;</h3>
+          <table>
+            <tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr>
+            <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>1</td></tr>
+            <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+            <tr><td class="active">10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+          </table>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+          <div class="stat healthy">Healthy <br><span>25</span></div>
+          <div class="stat sick">Sick <br><span>3</span></div>
+          <div class="stat dead">Dead <br><span>2</span></div>
+        </div>
+
+        <!-- Graph + Age -->
+        <div class="bottom-section">
+          <div class="graph">
+            <p>Average chicken’s behaviour</p>
+            <img src="https://dummyimage.com/300x150/ccffcc/333.png&text=Graph+Here" alt="Graph">
+          </div>
+          <div class="age">
+            <p>Chicken’s Age</p>
+            <h1>38 <span>days</span></h1>
+          </div>
+        </div>
+
+        <!-- Cage info -->
+        <div class="info">
+          <div class="info-card">Cage 1 Temperature <br><span>28°c</span></div>
+          <div class="info-card">Cage 1 Humidity <br><span>47%</span></div>
+          <div class="info-card">Cage 1 Total chicken <br><span>30</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

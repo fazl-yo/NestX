@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H.I.J.A.U.</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">H.I.J.A.U.</div>
+    <img class="avatar" alt="User" src="https://images.unsplash.com/photo-1528784351875-d797d86873a1?auto=format&fit=crop&w=200&q=60" />
+  </header>
+
+  <main class="shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="nav" id="mainNav">
+        <button data-page="overview">Overview</button>
+        <button data-page="chickens">Chickens</button>
+        <button data-page="maggots">Maggots</button>
+        <button data-page="analytic">Analytic</button>
+        <button class="active" data-page="settings">Settings</button>
+      </nav>
+    </aside>
+
+    <!-- Main content area -->
+    <section>
+      <!-- Settings Layout -->
+      <div class="content" id="page-settings">
+        <div class="panel">
+          <div class="muted" style="font-weight:800; margin:6px 8px 12px">Settings</div>
+          <div class="subnav" id="settingsNav">
+            <button class="active" data-tab="profile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-7 8-7s8 3 8 7"/></svg>
+              Profile Settings
+            </button>
+            <button data-tab="cage">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V3"/></svg>
+              Cage Settings
+            </button>
+            <button data-tab="notif">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0v5l2 2H4l2-2V8"/><path d="M9 21h6"/></svg>
+              Notification
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <!-- Profile Tab -->
+          <div class="tab" id="tab-profile">
+            <div class="profile-head">
+              <img alt="Chicken Avatar" src="https://images.unsplash.com/photo-1516637090014-cb1ab0d08fc7?auto=format&fit=crop&w=200&q=60"/>
+              <div>
+                <div class="title">Alya Bakekok</div>
+                <div class="muted">Farm Admin</div>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="field">
+                <label>Full Name</label>
+                <input type="text" value="Alya Bakekok"/>
+              </div>
+              <div class="field">
+                <label>Email</label>
+                <input type="email" value="alya@hijau.farm"/>
+              </div>
+              <div class="field">
+                <label>Role</label>
+                <select><option>Admin</option><option>Staff</option></select>
+              </div>
+              <div class="field">
+                <label>Phone</label>
+                <input type="tel" value="+62 812‑3456‑7890"/>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Save Changes</button>
+              <button class="btn ghost">Cancel</button>
+            </div>
+          </div>
+
+          <!-- Cage Tab -->
+          <div class="tab" id="tab-cage" style="display:none">
+            <div class="title" style="margin-bottom:12px">Cage Settings</div>
+            <div class="grid">
+              <div class="field">
+                <label>Cage Name</label>
+                <input type="text" value="Kandang A"/>
+              </div>
+              <div class="field">
+                <label>Target Temperature (°C)</label>
+                <input type="number" value="30"/>
+              </div>
+              <div class="field">
+                <label>Target Humidity (%)</label>
+                <input type="number" value="65"/>
+              </div>
+              <div class="field">
+                <label>Ventilation Mode</label>
+                <select><option>Auto</option><option>Manual</option></select>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Save</button>
+              <button class="btn ghost">Reset</button>
+            </div>
+          </div>
+
+          <!-- Notification Tab -->
+          <div class="tab" id="tab-notif" style="display:none">
+            <div class="title" style="margin-bottom:12px">Notifications</div>
+            <div class="field" style="margin-bottom:10px">
+              <label><input type="checkbox" checked style="margin-right:8px"> Health Alerts</label>
+            </div>
+            <div class="field" style="margin-bottom:10px">
+              <label><input type="checkbox" checked style="margin-right:8px"> Temperature Warnings</label>
+            </div>
+            <div class="field" style="margin-bottom:10px">
+              <label><input type="checkbox" style="margin-right:8px"> Feed Low</label>
+            </div>
+            <div class="actions">
+              <button class="btn primary">Update Preferences</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder containers for other pages (for demo) -->
+      <div class="card" id="page-overview" style="display:none"><div class="title">Overview</div><p class="muted">Quick stats and summaries.</p></div>
+      <div class="card" id="page-chickens" style="display:none"><div class="title">Chickens</div><p class="muted">List, health, vaccination tracker.</p></div>
+      <div class="card" id="page-maggots" style="display:none"><div class="title">Maggots</div><p class="muted">BSF farm monitoring and yield.</p></div>
+      <div class="card" id="page-analytic" style="display:none"><div class="title">Analytic</div><p class="muted">Charts and trends.</p></div>
+      <script src="script.js"></script>
+    </section>
+  </main>
+
